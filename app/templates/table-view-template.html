@@ -1,0 +1,29 @@
+  <div class="panel-heading">Models</div>
+  <div class='panel-body'>
+    <table class="table table-hover">
+      <thead>
+        <th class="table-header">Name</th>
+        <th class="table-header">Attribute</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class='panel-footer'>
+    <ul class="pagination">
+      <li><a href="#page/<%- parseInt(page) -1 %>">Prev</a></li>
+      
+      <li><a href="#page/<%- parseInt(page) - 5 %>"><%- parseInt(page) - 5 %></a></li>
+      <li><a href="#page/<%- parseInt(page) - 4 %>"><%- parseInt(page) - 4 %></a></li>      
+      <li><a href="#page/<%- parseInt(page) - 3 %>"><%- parseInt(page) - 3 %></a></li>
+      <li><a href="#page/<%- parseInt(page) -2 %>"><%- parseInt(page) - 2 %></a></li>
+      <li><a href="#page/<%- parseInt(page) -1 %>"><%- parseInt(page) - 1 %></a></li>
+      <li class='active'><a href="#page/<%- parseInt(page) %>"><%- parseInt(page) %></a></li>
+      <li><a href="#page/<%- parseInt(page) + 1 %>"><%- parseInt(page) + 1 %></a></li>
+      <li><a href="#page/<%- parseInt(page) + 2 %>"><%- parseInt(page) + 2 %></a></li>
+      <li><a href="#page/<%- parseInt(page) + 3 %>"><%- parseInt(page) + 3 %></a></li>
+      <li><a href="#page/<%- parseInt(page) + 4 %>"><%- parseInt(page) + 5 %></a></li>
+      <li><a href="#page/<%- parseInt(page) + 5 %>"><%- parseInt(page) + 4 %></a></li>
+      
+      <li><a href="#page/<%- parseInt(page) + 1 %>">Next</a></li>      
+    </ul>
+  </div>

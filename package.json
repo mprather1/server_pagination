@@ -1,6 +1,6 @@
 {
-  "name": "backbone_postgres_seed",
-  "version": "1.3.2",
+  "name": "server_pagination",
+  "version": "0.0.2",
   "description": "",
   "main": "build/server.js",
   "scripts": {
@@ -10,13 +10,9 @@
     "build": "babel -d build src",
     "watch": "babel --watch -d build src | ts '[%Y-%m-%d %H:%M:%S]'"
   },
-  "repository": "git+https://github.com/shintech/backbone_postgres_seed.git",
+  "repository": "git+https://github.com/mprather1/server_pagination.git",
   "author": "Michael Prather",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shintech/backbone_postgres_seed/issues"
-  },
-  "homepage": "",
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "backbone": "^1.3.3",

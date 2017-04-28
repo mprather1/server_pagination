@@ -15,7 +15,6 @@ export default function paginate (req, data, pageSize) {
   if (typeof req.query.page !== 'undefined') {
     currentPage = + req.query.page
   }
-  console.log(currentPage)
   modelsList = modelsArrays[+currentPage - 1]
   
   pageCount = total / pageSize
