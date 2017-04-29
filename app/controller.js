@@ -8,8 +8,18 @@ const Controller = Marionette.Object.extend({
   },
   
   page: function (options) {
-    const products = new Models([], {page: options })
-    this.app.view.showChildView('main', new TableView({ collection: products, page: options }))    
+    const app = this.app
+    const models = new Models([], { page: options })
+    
+    models.fetch({
+      success: function (data) {
+        const { currentPage } = data.pageData
+        
+        console.log('Successfully fetched data from page number ' + currentPage + '...')
+        
+        app.view.showChildView('main', new TableView({ collection: models, pageData: data.pageData }))
+      }
+    })
   }  
 })
 

@@ -4,7 +4,8 @@ export default function paginate (req, data, pageSize) {
     currentPage = 1, 
     modelsArrays = [], 
     modelsList = [],
-    object = {}
+    object = {},
+    pageData = {}
     
   total = data.length
   
@@ -25,12 +26,16 @@ export default function paginate (req, data, pageSize) {
     pageCount = parseInt(pageCount + 1)
   }
   
-  object = {
-    models: modelsList,
+  pageData = {
     pageSize: pageSize,
     total: total,
     pageCount: pageCount,
-    currentPage: currentPage      
+    currentPage: currentPage  
+  }
+  
+  object = {
+    models: modelsList,
+    pageData: pageData
   }
   
   return object

@@ -18,8 +18,11 @@ const Models = Backbone.Collection.extend({
   },
   
   parse: function (response) {
-    return response.models
-  }
+    let updatedResponse = {}
+    updatedResponse = _.merge(response.models, { pageData: response.pageData })
+    this.pageData = response.pageData
+    return updatedResponse
+    }
 })
 
 export default Models

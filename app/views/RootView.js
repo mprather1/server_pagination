@@ -12,9 +12,6 @@ const RootView = Backbone.Marionette.View.extend({
       el: '#main-view'
     }
   },
-  initialize: function () {
-    this.render()
-  },
   onRender: function () {
     this.showChildView('header', new NavigationView({ title: 'Default' }))
   }
