@@ -5,7 +5,6 @@ const Models = Backbone.Collection.extend({
   
   initialize: function (model, options) {
     const {page} = options
-    
     let pageNumber
     
     if (page) {
@@ -18,11 +17,10 @@ const Models = Backbone.Collection.extend({
   },
   
   parse: function (response) {
-    let updatedResponse = {}
-    updatedResponse = _.merge(response.models, { pageData: response.pageData })
     this.pageData = response.pageData
-    return updatedResponse
-    }
+
+    return response.models
+  }
 })
 
 export default Models

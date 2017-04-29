@@ -51,6 +51,29 @@ INSERT INTO models ( name, attribute )
 VALUES ( 'test19', 19 );
 INSERT INTO models ( name, attribute )
 VALUES ( 'test20', 20 );
+INSERT INTO models ( name, attribute )
+VALUES ( 'test21', 21 );
+INSERT INTO models ( name, attribute )
+VALUES ( 'test22', 22 );
+INSERT INTO models ( name, attribute )
+VALUES ( 'test23', 23 );
+INSERT INTO models ( name, attribute )
+VALUES ( 'test24', 24 );
+INSERT INTO models ( name, attribute )
+VALUES ( 'test25', 25 );
+INSERT INTO models ( name, attribute )
+VALUES ( 'test26', 26 );
+INSERT INTO models ( name, attribute )
+VALUES ( 'test27', 27 );
+INSERT INTO models ( name, attribute )
+VALUES ( 'test28', 28 );
+INSERT INTO models ( name, attribute )
+VALUES ( 'test29', 29 );
+INSERT INTO models ( name, attribute )
+VALUES ( 'test30', 30 );
+INSERT INTO models ( name, attribute )
+VALUES ( 'test31', 31 );
+
 
 DROP DATABASE IF EXISTS api_test;
 CREATE DATABASE api_test;

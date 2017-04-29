@@ -1,4 +1,5 @@
 import ModelsView from './ModelsView'
+import FooterView from './FooterView'
 
 const TableView = Backbone.Marionette.View.extend({
   tagName: 'div',
@@ -20,17 +21,14 @@ const TableView = Backbone.Marionette.View.extend({
   },    
   
   initialize: function (options) {
+    this.pageData = options.pageData
   },
   
   onRender: function () {
     this.showChildView('body', new ModelsView({ collection: this.collection }))
+    this.showChildView('footer', new FooterView({ pageData: this.pageData}))
   },
   
-  serializeData: function () {
-    return { 
-      'page': this.page,
-    }
-  },
   mouseoverFunc: function(event){
     $(event.currentTarget).css({"background-color":"lightgrey","cursor":"pointer"});
   },
@@ -39,7 +37,7 @@ const TableView = Backbone.Marionette.View.extend({
   },
   rowMouseOver: function(event){
     $(event.currentTarget).css({"cursor":"pointer"});
-  },    
+  }
 })
 
 export default TableView
